@@ -161,8 +161,8 @@ export const numberOfOddAndEvenNumbers = (array) => {
     return `The array should have only numbers`;
   }
   return {
-    odd: getOddNumbersFromArray(array).length,
-    even: getEvenNumbersFromArray(array).length
+    even: getEvenNumbersFromArray(array).length,
+    odd: getOddNumbersFromArray(array).length
   }
 }
 
