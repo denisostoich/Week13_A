@@ -15,6 +15,7 @@ describe('complexOperation - Unit Tests', () => {
   describe('calculateArea', () => {
     it('first test for calculateArea', () => {
       expect(complexOperations.calculateArea()).toEqual('undefined is not supported');
+      expect(complexOperations.calculateArea('parallelogram', 4, 4)).toEqual('parallelogram is not supported');
       expect(complexOperations.calculateArea('square')).toEqual('number1 and number2 should be numbers');
       expect(complexOperations.calculateArea('square', 'hola', 3)).toEqual('number1 and number2 should be numbers');
       expect(complexOperations.calculateArea('square', 3, 'hola')).toEqual('number1 and number2 should be numbers');
@@ -48,6 +49,7 @@ describe('complexOperation - Unit Tests', () => {
   describe('sortArrayOfObjectsByKey', () => {
     it('first test for sortArrayOfObjectsByKey', () => {
       expect(complexOperations.sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { name: 'David' }], 'name')).toEqual([{ name: 'David' }, { name: 'Guille' }, { name: 'Rodrigo' }]);
+      expect(complexOperations.sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Guille' }], 'name')).toEqual([{ name: 'Guille' }, { name: 'Guille' }]);
       expect(complexOperations.sortArrayOfObjectsByKey(undefined, 'name')).toEqual('The first param should be an array');
       expect(complexOperations.sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { name: 'David' }], 1)).toEqual('The second param should be an string');
       expect(complexOperations.sortArrayOfObjectsByKey([{ name: 'Guille' }, { name: 'Rodrigo' }, { name: 'David' }], '')).toEqual('The second param should be an string');
